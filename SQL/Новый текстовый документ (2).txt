@@ -1,0 +1,67 @@
+SELECT * 
+FROM books
+SELECT TOP 5 Pressrun FROM books 
+ORDER BY Date DESC
+
+
+SELECT * 
+FROM books
+WHERE Price > 10 AND Price < 50
+ORDER BY Price DESC
+
+
+
+SELECT * 
+FROM books
+WHERE N < Price OR Code < Price
+ORDER BY Price DESC
+
+
+
+SELECT * 
+FROM books
+WHERE N < Price 
+
+
+SELECT * 
+FROM books
+WHERE N > Pressrun
+
+
+
+SELECT TOP 10 Pressrun * Price AS 'Total price'
+FROM books 
+ORDER BY Pressrun * Price DESC
+
+
+
+
+SELECT TOP 2 PERCENT * FROM books
+ORDER BY Date 
+
+
+
+SELECT * 
+FROM books
+WHERE Date BETWEEN '1996-01-01 00:00:00.000' AND '1998-12-15 00:00:00.000'
+ORDER BY Date  DESC
+
+
+
+SELECT * 
+FROM books
+WHERE Date BETWEEN  MONTH(' 1993-02-24 00:00:00.000') AND MONTH ('2001-03-05 00:00:00.000')
+ORDER BY Date DESC
+
+
+SELECT TOP 5 *
+FROM books 
+WHERE MONTH(Date) IN (12, 1, 2)
+ORDER BY New  DESC, Price DESC
+
+
+
+SELECT * 
+FROM books
+WHERE MONTH(Date) IN (5, 6)
+ORDER BY Date DESC
